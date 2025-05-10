@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Münzen verdienen - Werbung anschauen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google AdSense Skript -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4743415945031649"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Münzen Verdienen</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Startseite</a></li>
+                    <li><a href="#about">Über uns</a></li>
+                    <li><a href="#how-it-works">Wie es funktioniert</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Verdiene Münzen durch Werbung</h2>
+            <p>Schaue dir Werbung an und verdiene Münzen, die du später einlösen kannst!</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary" id="register-btn">Registrieren</a>
+                <a href="#" class="btn btn-secondary" id="login-btn">Anmelden</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="user-dashboard" class="hidden">
+        <div class="container">
+            <div class="user-info">
+                <h3>Willkommen, <span id="username">Benutzer</span>!</h3>
+                <div class="coin-balance">
+                    <img src="img/coin.svg" alt="Münze" class="coin-icon">
+                    <span id="coin-count">0</span> Münzen
+                </div>
+            </div>
+            <div class="ad-container">
+                <h3>Werbung anschauen und Münzen verdienen</h3>
+                <div id="ad-placeholder" class="ad-placeholder">
+                    <!-- Werbung wird hier eingefügt -->
+                    <div class="placeholder-text">Werbung lädt...</div>
+                </div>
+                <button id="watch-ad-btn" class="btn btn-primary">Werbung anschauen</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>Über uns</h2>
+            <p>Wir bieten eine einfache Möglichkeit, durch das Anschauen von Werbung Münzen zu verdienen. Diese Münzen können später gegen Prämien oder Gutscheine eingelöst werden.</p>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>Wie es funktioniert</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Registrieren</h3>
+                    <p>Erstelle ein kostenloses Konto auf unserer Plattform.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Werbung anschauen</h3>
+                    <p>Schaue dir Werbeanzeigen an und verdiene Münzen für jede gesehene Anzeige.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Münzen sammeln</h3>
+                    <p>Sammle Münzen und verfolge deinen Fortschritt in deinem Konto.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Belohnungen einlösen</h3>
+                    <p>Tausche deine Münzen gegen Prämien, Gutscheine oder Bargeld ein.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zusätzliche Google AdSense Anzeige -->
+    <div class="container ad-section">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-4743415945031649"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <p>Bei Fragen oder Anregungen kannst du uns gerne kontaktieren:</p>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Nachricht</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Senden</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Login/Register Modal -->
+    <div id="auth-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="login-form" class="auth-form">
+                <h3>Anmelden</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="login-email">E-Mail</label>
+                        <input type="email" id="login-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Passwort</label>
+                        <input type="password" id="login-password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Anmelden</button>
+                </form>
+                <p>Noch kein Konto? <a href="#" id="show-register">Registrieren</a></p>
+            </div>
+            <div id="register-form" class="auth-form hidden">
+                <h3>Registrieren</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="register-username">Benutzername</label>
+                        <input type="text" id="register-username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">E-Mail</label>
+                        <input type="email" id="register-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Passwort</label>
+                        <input type="password" id="register-password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm-password">Passwort bestätigen</label>
+                        <input type="password" id="register-confirm-password" name="confirm-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrieren</button>
+                </form>
+                <p>Bereits ein Konto? <a href="#" id="show-login">Anmelden</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Münzen Verdienen. Alle Rechte vorbehalten.</p>
+            <div class="footer-links">
+                <a href="#">Datenschutz</a>
+                <a href="#">AGB</a>
+                <a href="#">Impressum</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

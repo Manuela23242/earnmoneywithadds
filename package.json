@@ -1,0 +1,14 @@
+{
+  "name": "coin-earning-website",
+  "version": "1.0.0",
+  "description": "Website where users can earn coins by viewing advertisements",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "http": "0.0.1-security",
+    "fs": "0.0.1-security",
+    "path": "0.12.7"
+  }
+} 
